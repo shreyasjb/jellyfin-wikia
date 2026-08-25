@@ -4,7 +4,6 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -13,38 +12,76 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>🎬 Hi, I'm still figuring this out.</h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				This is a webpage-style blog I'm using to post updates on my Jellyfin server, mostly so
+				I stop forgetting what I've changed and can point people here instead of repeating myself
+				for the fourth time. Fair warning: a lot of this is still very much a <strong>work in progress</strong>,
+				in the same way that a house with no roof is technically "a work in progress."
 			</p>
+
+			<h2>So, what happened to Jellyfin?</h2>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				For a while I was running a Docker and native Windows service hybrid setup, which sounds
+				efficient and modern and was, in fact, neither. It caused a fairly relentless stream of
+				problems, the kind that make you stare at a terminal window at 1am questioning your life
+				choices. So I've done the sensible thing and ripped it all out: everything now runs as a
+				<strong>full native Windows install</strong>. No more hybrid nonsense.
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+
+			<h2>What's still cooking</h2>
+			<p>
+				Some things are still happening quietly in the background while I get everything settled.
+				I'm also working on a few new features:
+			</p>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>A proper watchlist</li>
+				<li>Better recommendations (the current ones are... optimistic, at best)</li>
+				<li>Restoring a handful of older features that got left behind in the move</li>
 			</ul>
+
+			<h2>The bad news</h2>
 			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				User data got wiped in the process, so I've gone ahead and recreated everyone's profiles
+				from scratch. Sorry about that — think of it as a fresh start, or a very inconvenient
+				spring clean. If something's missing, wrong, or has mysteriously vanished, let me know.
+				You know how to reach me. 🙂
 			</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 3em 1.5em 4em;
+		line-height: 1.7;
+	}
+	h1 {
+		font-size: 2.1em;
+		margin-bottom: 0.6em;
+	}
+	h2 {
+		margin-top: 1.8em;
+		margin-bottom: 0.4em;
+		font-size: 1.3em;
+		border-bottom: 2px solid var(--accent, #4c1d95);
+		display: inline-block;
+		padding-bottom: 0.15em;
+	}
+	p {
+		margin: 0.8em 0;
+	}
+	ul {
+		margin: 0.8em 0;
+		padding-left: 1.4em;
+	}
+	li {
+		margin: 0.4em 0;
+	}
+	strong {
+		color: var(--accent, #4c1d95);
+	}
+</style>
